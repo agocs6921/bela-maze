@@ -61,8 +61,8 @@ function update(delta: number) {
     // We set the positions of the camera, so it goes in a circle around the maze
     // You just need to calculate the points with sin and cos to get the position
     // and then some offset so it actually rotates around the maze
-    CAMERA.position.x = x / 1.5 * Math.sin(deg2rad(degree)) + x / 2
-    CAMERA.position.z = y / 1.5 * Math.cos(deg2rad(degree)) + y / 2
+    CAMERA.position.x = x / 1.5 * Math.sin(deg2rad(degree)) + x / 2 - .5
+    CAMERA.position.z = y / 1.5 * Math.cos(deg2rad(degree)) + y / 2 - .5
 
     // The method name explains itself
     CAMERA.lookAt(new Vector3(x / 2, 0, y / 2))
